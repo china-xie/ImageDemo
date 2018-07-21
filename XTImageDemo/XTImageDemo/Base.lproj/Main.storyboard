@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pCe-Go-DOe"/>
+                        <viewControllerLayoutGuide type="bottom" id="dcB-zj-L6b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQg-nY-zpo">
+                                <rect key="frame" x="285" y="30" width="64" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="M4a-JO-XIn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="拍照">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5m-ho-1MP"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abW-wb-TBD">
+                                <rect key="frame" x="-4" y="71" width="383" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="NkL-v3-mxr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIa-of-f1G">
+                                <rect key="frame" x="-24" y="542" width="423" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2B2-3d-Op0"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图片展示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdM-fV-ppC">
+                                <rect key="frame" x="43" y="35" width="57.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="abW-wb-TBD" firstAttribute="top" secondItem="YdM-fV-ppC" secondAttribute="bottom" constant="19" id="2ZZ-dt-wyJ"/>
+                            <constraint firstItem="abW-wb-TBD" firstAttribute="leading" secondItem="YIa-of-f1G" secondAttribute="leading" constant="20" id="Kug-qv-4GN"/>
+                            <constraint firstItem="abW-wb-TBD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VYa-ai-LNY"/>
+                            <constraint firstItem="YdM-fV-ppC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="Vfj-n1-LcD"/>
+                            <constraint firstItem="abW-wb-TBD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="XM2-2i-fLT"/>
+                            <constraint firstItem="dcB-zj-L6b" firstAttribute="top" secondItem="YIa-of-f1G" secondAttribute="bottom" constant="124" id="ZlH-dL-1Hq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VQg-nY-zpo" secondAttribute="trailing" constant="10" id="bKd-xS-637"/>
+                            <constraint firstItem="VQg-nY-zpo" firstAttribute="top" secondItem="pCe-Go-DOe" secondAttribute="bottom" constant="10" id="guU-BF-9d7"/>
+                            <constraint firstItem="abW-wb-TBD" firstAttribute="top" secondItem="VQg-nY-zpo" secondAttribute="bottom" constant="9" id="hz2-DO-WtQ"/>
+                            <constraint firstItem="YdM-fV-ppC" firstAttribute="top" secondItem="pCe-Go-DOe" secondAttribute="bottom" constant="15" id="jcc-B1-NkG"/>
+                            <constraint firstItem="abW-wb-TBD" firstAttribute="trailing" secondItem="YIa-of-f1G" secondAttribute="trailing" constant="-20" id="qoi-Pq-bNQ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="getCameraBtn" destination="VQg-nY-zpo" id="Gr2-Uf-QiA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
